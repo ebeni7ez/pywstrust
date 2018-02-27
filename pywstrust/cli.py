@@ -4,6 +4,12 @@
 import sys
 import click
 
+from pywstrust.pywstrust import get_token
+
+
+def get_saml_token(username, password, realm):
+    return get_token(username, password, realm)
+
 
 @click.command()
 def main(args=None):
